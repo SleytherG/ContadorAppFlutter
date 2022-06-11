@@ -5,6 +5,8 @@ class HomePage extends StatelessWidget {
 
   final estiloTexto = TextStyle( fontSize: 25);
 
+  final contador = 10;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +19,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Número de Clicks:', style: estiloTexto),
-            Text('0', style: estiloTexto)
+            Text('$contador', style: estiloTexto)
           ],
         ),
       ),
@@ -25,6 +27,7 @@ class HomePage extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: () {
           print('Hola Mundo');
+          
         },
         focusColor: Colors.green,
         autofocus: true,
